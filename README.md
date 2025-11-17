@@ -127,16 +127,14 @@ eb create fraud-service-dev
 eb terminate fraud-service-dev
 ```
 
-## URL for testing
-
-> http://fraud-service-dev.eba-enrjx8jr.us-east-1.elasticbeanstalk.com/predict
+## Code to try it out
 
 Example code for testing the deployment:
 
 ```python
 import requests
 
-url = "http://fraud-service-dev.eba-enrjx8jr.us-east-1.elasticbeanstalk.com/predict"
+url = "http://localhost:9696/predict"
 client = {
  'client_catg':  'client_catg_11',
  'region': 'region_103',
