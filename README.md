@@ -1,5 +1,7 @@
 # Fraud Detection in Energy Consumption
 
+## Motivation
+
 In industries with high volumes of transactional data, detecting anomalies such as fraud is a critical task for maintaining operational integrity and reducing financial losses. The goal of this model is to identify fraudulent activity among clients based on historical data, including demographic information and usage patterns.
 
 The dataset comprises two key components:
@@ -27,17 +29,19 @@ This solution will be used by operational teams to:
 1. **Prioritize Investigations**: Identify high-risk clients who need further review or monitoring.
 2. **Improve Resource Allocation**: Focus efforts on clients most likely to be fraudulent, optimizing the use of investigative resources.
 
-# Dataset
+## Quick Start
+
+### Dataset
 
 The dataset can be found in [data/archive.zip](data/archive.zip)
 
 Or in [kaggle](https://www.kaggle.com/datasets/mrmorj/fraud-detection-in-electricity-and-gas-consumption?select=client_train.csv)
 
-# Installation and Setup
+### Installation and Setup
 
 This project uses Pipenv for dependency management and virtual environment creation. Follow these steps to set up the environment and install the required dependencies:
 
-## Prerequisites
+### Prerequisites
 
 1. Ensure you have Python 3.7 or later installed.
 
@@ -101,7 +105,7 @@ docker build -t ml-zoomcamp-midterm .
 docker run -p 9696:9696 -d ml-zoomcamp-midterm
 ```
 
-# Deployment
+### Deployment
 
 1. Install aws elastic beanstalk cli
 
@@ -127,7 +131,7 @@ eb create fraud-service-dev
 eb terminate fraud-service-dev
 ```
 
-## Code to try it out
+## Usage
 
 Example code for testing the deployment:
 
@@ -150,3 +154,7 @@ client = {
 }
 requests.post(url, json=client).json()
 ```
+
+### Contributing
+
+If you'd like to contribute, please fork the repository and open a pull request to the `main` branch.
